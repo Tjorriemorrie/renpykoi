@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}Renpy Koi{% endblock %}</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'main/favicon.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'main/favicon.png' %}">
+
+    <link href="{% static 'main/bootstrap-5.3.6-dist/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'main/bootstrap-icons-1.13.1/bootstrap-icons.min.css' %}"
+          rel="stylesheet"/>
+
+    <link href="{% static 'main/css/main.css' %}" rel="stylesheet"/>
+
+    <script src="{% static 'main/bootstrap-5.3.6-dist/js/bootstrap.min.js' %}"
+            type="text/javascript"></script>
+    <script src="{% static 'main/js/main.js' %}" type="text/javascript"></script>
+</head>
+<body>
+<div class="container-fluid">
+    {% include 'main/snippet_navbar.html' %}
+
+    <!-- Flash messages -->
+    {% if messages %}
+        <div class="alert-container">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>

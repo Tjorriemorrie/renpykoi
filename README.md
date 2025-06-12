@@ -2,6 +2,7 @@
 
 Renpy files generator
 
+___
 ## Installation
 
 1. Clone the repository.
@@ -26,7 +27,13 @@ Run the app
 python manage.py runserver 8246
 ```
 
+___
 ## Contribution
 
  Create a pull request as normal. The repo follows the rules as set out in the project.toml,
 thus ensure you ran `pre-commit install` if you do any dev work on the app.
+
+___
+## Donations
+
+You can donate bitcoin to: 38W8wv3h3oFUP9TBa4fgvab3zP6WFUAKs6
